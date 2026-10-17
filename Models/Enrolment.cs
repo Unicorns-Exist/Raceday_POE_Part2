@@ -18,7 +18,6 @@ namespace Raceday_POE2.Models
 
         // Date and time when the enrolment was recorded.
         public DateTime EnrolmentDate { get; set; }
-            = DateTime.Now;
 
         // Tracks whether the enrolment is Active or Cancelled.
         [Required]
