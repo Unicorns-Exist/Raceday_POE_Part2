@@ -25,7 +25,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register(registerRequest request)
+    public async Task<IActionResult> Register(RegisterRequest request)
     {
         var email = request.Email.Trim().ToLowerInvariant();
         if (await _context.Users.AnyAsync(u => u.Email.ToLower() == email))
