@@ -1,0 +1,24 @@
+﻿# RaceDay Database Design
+
+The RaceDay database consists of six main entities:
+
+1. **User:** Stores user details, login information and user roles.
+2. **Event:** Stores race event information and identifies the organiser responsible for the event.
+3. **Category:** Stores reusable event categories.
+4. **EventCategory:** Connects events to categories and stores category-specific information such as entry fees and participant limits.
+5. **Enrolment:** Records participants who enrol in an event category.
+6. **Result:** Stores the result associated with an enrolment.
+
+## Relationships
+
+- One organiser can organise multiple events.
+- An event can have multiple categories.
+- A category can be associated with multiple events.
+- EventCategory connects Event and Category.
+- A participant can have multiple enrolments.
+- Each enrolment belongs to an event category.
+- An enrolment can have an associated result.
+
+The database uses primary keys and foreign keys to maintain relationships and data integrity.
+
+Refer to the project's ERD for the visual representation of these relationships.
